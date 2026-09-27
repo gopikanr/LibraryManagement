@@ -1,24 +1,68 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import FirstLoginPage from "./frontendpages/FirstLoginPage";
+import AdminDashboard from "./frontendpages/AdminDashboard";
+
+function UserDashboard() {
+  return (
+    <div>
+      <h1>User Dashboard</h1>
+      <p>Welcome to the User Dashboard</p>
+    </div>
+  );
+}
+
+function BooksPage() {
+  return (
+    <div>
+      <h1>Books Management</h1>
+      <p>Subi will build this page.</p>
+    </div>
+  );
+}
+
+function UsersPage() {
+  return (
+    <div>
+      <h1>Users Management</h1>
+      <p>Subi will build this page.</p>
+    </div>
+  );
+}
+
+function IssueReturnPage() {
+  return (
+    <div>
+      <h1>Issue / Return</h1>
+      <p>This page will be developed later.</p>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+
+        {/* Login */}
+        <Route path="/" element={<FirstLoginPage />} />
+
+        {/* Admin Dashboard */}
+        <Route path="/admin" element={<AdminDashboard />} />
+
+        {/* Admin Pages */}
+        <Route path="/admin/books" element={<BooksPage />} />
+        <Route path="/admin/users" element={<UsersPage />} />
+        <Route
+          path="/admin/issue-return"
+          element={<IssueReturnPage />}
+        />
+
+        {/* User Dashboard */}
+        <Route path="/user" element={<UserDashboard />} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
