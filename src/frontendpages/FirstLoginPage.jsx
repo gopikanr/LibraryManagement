@@ -26,50 +26,116 @@ function FirstLoginPage() {
   return (
     <div className="login-page">
 
-      <div className="login-box">
+      {/* Decorative background circles */}
+      <div className="login-circle circle-one"></div>
+      <div className="login-circle circle-two"></div>
+      <div className="login-circle circle-three"></div>
 
-        <h1>Library Management System</h1>
+      <div className="login-container">
 
-        <h2>Login</h2>
+        {/* Left Side */}
+        <div className="login-intro">
 
-        <form onSubmit={handleLogin}>
+          <div className="library-icon">
+            📚
+          </div>
 
-          <label>Username</label>
+          <h1>Library Management</h1>
 
-          <input
-            type="text"
-            placeholder="Enter username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+          <p>
+            Manage your library, books and users
+            in one simple and beautiful place.
+          </p>
 
-          <label>Password</label>
+          <div className="intro-features">
+            <div>
+              <span>✓</span>
+              Easy Book Management
+            </div>
 
-          <input
-            type="password"
-            placeholder="Enter password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+            <div>
+              <span>✓</span>
+              User Management
+            </div>
 
-          <label>Login As</label>
+            <div>
+              <span>✓</span>
+              Quick Issue & Return
+            </div>
+          </div>
 
-          <select
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
-          >
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
-          </select>
+        </div>
 
-          <button type="submit">
-            Login
-          </button>
+        {/* Login Card */}
+        <div className="login-card">
 
-        </form>
+          <div className="login-heading">
+            <h2>Welcome Back 👋</h2>
+            <p>Login to continue to your account</p>
+          </div>
+
+          <form onSubmit={handleLogin}>
+
+            <div className="input-group">
+              <label>Username</label>
+
+              <div className="input-wrapper">
+                <span>👤</span>
+
+                <input
+                  type="text"
+                  placeholder="Enter your username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </div>
+            </div>
+
+            <div className="input-group">
+              <label>Password</label>
+
+              <div className="input-wrapper">
+                <span>🔒</span>
+
+                <input
+                  type="password"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+            </div>
+
+            <div className="input-group">
+              <label>Login As</label>
+
+              <div className="input-wrapper">
+                <span>🎓</span>
+
+                <select
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                >
+                  <option value="user">User</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+            </div>
+
+            <button className="login-button" type="submit">
+              Login
+              <span>→</span>
+            </button>
+
+          </form>
+
+          <p className="login-footer">
+            Library Management System
+          </p>
+
+        </div>
 
       </div>
-
     </div>
   );
 }

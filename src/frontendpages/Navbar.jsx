@@ -11,16 +11,43 @@ function Navbar() {
   return (
     <nav className="navbar">
 
-      <div className="navbar-title">
-        <h2>Library Management System</h2>
+      {/* Logo / Brand */}
+      <div className="navbar-brand">
+        <div className="navbar-logo">
+          📚
+        </div>
+
+        <div>
+          <h2>Library Management</h2>
+          <span>Admin Panel</span>
+        </div>
       </div>
 
+      {/* Right Side */}
       <div className="navbar-right">
 
-        <span>Admin</span>
+        <button className="notification-button">
+          🔔
+          <span className="notification-dot"></span>
+        </button>
 
-        <button onClick={handleLogout}>
-          Logout
+        <div className="admin-profile">
+          <div className="admin-avatar">
+            A
+          </div>
+
+          <div className="admin-info">
+            <strong>Admin</strong>
+            <span>Administrator</span>
+          </div>
+        </div>
+
+        <button
+          className="logout-button"
+          onClick={handleLogout}
+        >
+          ↪
+          <span>Logout</span>
         </button>
 
       </div>
