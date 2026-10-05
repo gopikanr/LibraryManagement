@@ -11,6 +11,7 @@ function BookDetails() {
       <div className="book-details-container">
         <div className="details-card">
           <h2>Book not found</h2>
+
           <button
             className="back-button"
             onClick={() => navigate("/browse-books")}
@@ -24,7 +25,6 @@ function BookDetails() {
 
   return (
     <div className="book-details-container">
-
       <div className="details-card">
 
         <h1>Book Details</h1>
@@ -49,15 +49,25 @@ function BookDetails() {
           <strong className="available">Available</strong>
         </div>
 
-        <button
-          className="back-button"
-          onClick={() => navigate("/browse-books")}
-        >
-          ← Back to Books
-        </button>
+        <div className="details-buttons">
+
+          <button
+            className="back-button"
+            onClick={() => navigate("/browse-books")}
+          >
+            ← Back to Books
+          </button>
+
+          <button
+            className="back-button"
+            onClick={() => navigate("/")}
+          >
+            ← Dashboard
+          </button>
+
+        </div>
 
       </div>
-
     </div>
   );
 }
