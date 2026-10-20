@@ -32,7 +32,7 @@ function MyBooks() {
 
       <button
         className="back-button"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/user")}
       >
         ← Dashboard
       </button>
@@ -44,7 +44,9 @@ function MyBooks() {
       </p>
 
       <div className="my-books-card">
+
         <table className="books-table">
+
           <thead>
             <tr>
               <th>Book Title</th>
@@ -55,16 +57,33 @@ function MyBooks() {
           </thead>
 
           <tbody>
+
             {myBooks.map((book) => (
               <tr key={book.id}>
-                <td className="book-title">{book.title}</td>
-                <td>{book.author}</td>
-                <td>{book.category}</td>
-                <td>{book.status}</td>
+
+                <td className="book-title">
+                  {book.title}
+                </td>
+
+                <td>
+                  {book.author}
+                </td>
+
+                <td>
+                  {book.category}
+                </td>
+
+                <td>
+                  {book.status}
+                </td>
+
               </tr>
             ))}
+
           </tbody>
+
         </table>
+
       </div>
 
     </div>

@@ -25,7 +25,7 @@ function ReturnedBooks() {
 
       <button
         className="back-button"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/user")}
       >
         ← Dashboard
       </button>
@@ -33,11 +33,14 @@ function ReturnedBooks() {
       <h1>Returned Books</h1>
 
       <p className="page-description">
-        View the books you have previously returned to the library.
+        View the books you have previously returned
+        to the library.
       </p>
 
       <div className="table-container">
+
         <table className="books-table">
+
           <thead>
             <tr>
               <th>Book Title</th>
@@ -48,16 +51,33 @@ function ReturnedBooks() {
           </thead>
 
           <tbody>
+
             {returnedBooks.map((book) => (
               <tr key={book.id}>
-                <td className="book-title">{book.title}</td>
-                <td>{book.author}</td>
-                <td>{book.issueDate}</td>
-                <td>{book.returnDate}</td>
+
+                <td className="book-title">
+                  {book.title}
+                </td>
+
+                <td>
+                  {book.author}
+                </td>
+
+                <td>
+                  {book.issueDate}
+                </td>
+
+                <td>
+                  {book.returnDate}
+                </td>
+
               </tr>
             ))}
+
           </tbody>
+
         </table>
+
       </div>
 
     </div>

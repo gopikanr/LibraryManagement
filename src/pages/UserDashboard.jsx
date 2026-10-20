@@ -5,27 +5,33 @@ function UserDashboard() {
 
   return (
     <div className="dashboard-container">
+
       <h1>User Dashboard</h1>
 
-      <p>Welcome to the Library Management System!</p>
+      <p>
+        Welcome to the Library Management System!
+      </p>
 
       <div className="dashboard-buttons">
+
         <button onClick={() => navigate("/browse-books")}>
-          Browse Books
+          📚 Browse Books
         </button>
 
         <button onClick={() => navigate("/my-books")}>
-          My Books
+          📖 My Books
         </button>
 
         <button onClick={() => navigate("/issued-books")}>
-          Issued Books
+          📋 Issued Books
         </button>
 
         <button onClick={() => navigate("/returned-books")}>
-          Returned Books
+          ✅ Returned Books
         </button>
+
       </div>
+
     </div>
   );
 }

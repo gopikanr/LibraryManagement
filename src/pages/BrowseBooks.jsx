@@ -3,359 +3,148 @@ import { useNavigate } from "react-router-dom";
 
 function BrowseBooks() {
   const navigate = useNavigate();
-  const [search, setSearch] = useState("");
+
+  const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
   const books = [
     {
+      id: 1,
       title: "The Alchemist",
       author: "Paulo Coelho",
       category: "Fiction",
     },
     {
+      id: 2,
+      title: "Clean Code",
+      author: "Robert C. Martin",
+      category: "Programming",
+    },
+    {
+      id: 3,
       title: "Atomic Habits",
       author: "James Clear",
       category: "Self Help",
     },
     {
-      title: "Wings of Fire",
-      author: "A. P. J. Abdul Kalam",
-      category: "Biography",
-    },
-    {
-      title: "Clean Code",
-      author: "Robert C. Martin",
-      category: "Programming",
-    },
-
-    // 60 more books
-
-    {
-      title: "Harry Potter and the Philosopher's Stone",
-      author: "J. K. Rowling",
-      category: "Fantasy",
-    },
-    {
-      title: "Harry Potter and the Chamber of Secrets",
-      author: "J. K. Rowling",
-      category: "Fantasy",
-    },
-    {
-      title: "Harry Potter and the Prisoner of Azkaban",
-      author: "J. K. Rowling",
-      category: "Fantasy",
-    },
-    {
-      title: "Harry Potter and the Goblet of Fire",
-      author: "J. K. Rowling",
-      category: "Fantasy",
-    },
-    {
-      title: "Harry Potter and the Order of the Phoenix",
-      author: "J. K. Rowling",
-      category: "Fantasy",
-    },
-    {
-      title: "Harry Potter and the Half-Blood Prince",
-      author: "J. K. Rowling",
-      category: "Fantasy",
-    },
-    {
-      title: "Harry Potter and the Deathly Hallows",
-      author: "J. K. Rowling",
-      category: "Fantasy",
-    },
-    {
-      title: "The Hobbit",
-      author: "J. R. R. Tolkien",
-      category: "Fantasy",
-    },
-    {
-      title: "The Lord of the Rings",
-      author: "J. R. R. Tolkien",
-      category: "Fantasy",
-    },
-    {
-      title: "Pride and Prejudice",
-      author: "Jane Austen",
-      category: "Classic",
-    },
-    {
-      title: "Jane Eyre",
-      author: "Charlotte Bronte",
-      category: "Classic",
-    },
-    {
-      title: "Little Women",
-      author: "Louisa May Alcott",
-      category: "Classic",
-    },
-    {
-      title: "The Great Gatsby",
-      author: "F. Scott Fitzgerald",
-      category: "Classic",
-    },
-    {
-      title: "To Kill a Mockingbird",
-      author: "Harper Lee",
-      category: "Classic",
-    },
-    {
-      title: "1984",
-      author: "George Orwell",
-      category: "Dystopian",
-    },
-    {
-      title: "Animal Farm",
-      author: "George Orwell",
-      category: "Political Fiction",
-    },
-    {
-      title: "The Kite Runner",
-      author: "Khaled Hosseini",
-      category: "Fiction",
-    },
-    {
-      title: "A Thousand Splendid Suns",
-      author: "Khaled Hosseini",
-      category: "Fiction",
-    },
-    {
-      title: "The Book Thief",
-      author: "Markus Zusak",
-      category: "Historical Fiction",
-    },
-    {
-      title: "The Fault in Our Stars",
-      author: "John Green",
-      category: "Young Adult",
-    },
-    {
-      title: "The Hunger Games",
-      author: "Suzanne Collins",
-      category: "Dystopian",
-    },
-    {
-      title: "Catching Fire",
-      author: "Suzanne Collins",
-      category: "Dystopian",
-    },
-    {
-      title: "Mockingjay",
-      author: "Suzanne Collins",
-      category: "Dystopian",
-    },
-    {
-      title: "The Da Vinci Code",
-      author: "Dan Brown",
-      category: "Mystery",
-    },
-    {
-      title: "Angels & Demons",
-      author: "Dan Brown",
-      category: "Mystery",
-    },
-    {
-      title: "The Silent Patient",
-      author: "Alex Michaelides",
-      category: "Thriller",
-    },
-    {
-      title: "Gone Girl",
-      author: "Gillian Flynn",
-      category: "Thriller",
-    },
-    {
-      title: "The Girl on the Train",
-      author: "Paula Hawkins",
-      category: "Thriller",
-    },
-    {
+      id: 4,
       title: "The Psychology of Money",
       author: "Morgan Housel",
       category: "Finance",
     },
     {
+      id: 5,
       title: "Rich Dad Poor Dad",
       author: "Robert Kiyosaki",
       category: "Finance",
     },
     {
+      id: 6,
       title: "Think and Grow Rich",
       author: "Napoleon Hill",
       category: "Self Help",
     },
     {
-      title: "How to Win Friends and Influence People",
-      author: "Dale Carnegie",
-      category: "Self Help",
-    },
-    {
-      title: "The 7 Habits of Highly Effective People",
-      author: "Stephen Covey",
-      category: "Self Help",
-    },
-    {
-      title: "Deep Work",
-      author: "Cal Newport",
-      category: "Productivity",
-    },
-    {
-      title: "The Power of Habit",
-      author: "Charles Duhigg",
-      category: "Self Help",
-    },
-    {
-      title: "Ikigai",
-      author: "Hector Garcia",
-      category: "Self Help",
-    },
-    {
-      title: "Sapiens",
-      author: "Yuval Noah Harari",
-      category: "History",
-    },
-    {
-      title: "Homo Deus",
-      author: "Yuval Noah Harari",
-      category: "History",
-    },
-    {
-      title: "A Brief History of Time",
-      author: "Stephen Hawking",
-      category: "Science",
-    },
-    {
-      title: "The Theory of Everything",
-      author: "Stephen Hawking",
-      category: "Science",
-    },
-    {
-      title: "The Origin of Species",
-      author: "Charles Darwin",
-      category: "Science",
-    },
-    {
-      title: "Cosmos",
-      author: "Carl Sagan",
-      category: "Science",
-    },
-    {
-      title: "Introduction to Algorithms",
-      author: "Thomas H. Cormen",
-      category: "Computer Science",
-    },
-    {
+      id: 7,
       title: "The Pragmatic Programmer",
       author: "Andrew Hunt",
       category: "Programming",
     },
     {
-      title: "You Don't Know JS",
-      author: "Kyle Simpson",
+      id: 8,
+      title: "JavaScript: The Good Parts",
+      author: "Douglas Crockford",
       category: "Programming",
     },
     {
-      title: "Eloquent JavaScript",
-      author: "Marijn Haverbeke",
-      category: "Programming",
+      id: 9,
+      title: "Harry Potter",
+      author: "J.K. Rowling",
+      category: "Fantasy",
     },
     {
-      title: "Java: The Complete Reference",
-      author: "Herbert Schildt",
-      category: "Programming",
+      id: 10,
+      title: "The Hobbit",
+      author: "J.R.R. Tolkien",
+      category: "Fantasy",
     },
     {
-      title: "Python Crash Course",
-      author: "Eric Matthes",
-      category: "Programming",
+      id: 11,
+      title: "1984",
+      author: "George Orwell",
+      category: "Fiction",
     },
     {
-      title: "Hands-On Machine Learning",
-      author: "Aurélien Géron",
-      category: "Machine Learning",
+      id: 12,
+      title: "The Great Gatsby",
+      author: "F. Scott Fitzgerald",
+      category: "Fiction",
     },
     {
-      title: "Deep Learning",
-      author: "Ian Goodfellow",
-      category: "Machine Learning",
+      id: 13,
+      title: "To Kill a Mockingbird",
+      author: "Harper Lee",
+      category: "Fiction",
     },
     {
-      title: "Artificial Intelligence",
-      author: "Stuart Russell",
-      category: "Artificial Intelligence",
+      id: 14,
+      title: "Pride and Prejudice",
+      author: "Jane Austen",
+      category: "Romance",
     },
     {
-      title: "Data Science from Scratch",
-      author: "Joel Grus",
-      category: "Data Science",
-    },
-    {
-      title: "The Data Warehouse Toolkit",
-      author: "Ralph Kimball",
-      category: "Data Science",
-    },
-    {
-      title: "Computer Networks",
-      author: "Andrew S. Tanenbaum",
-      category: "Networking",
-    },
-    {
-      title: "Operating System Concepts",
-      author: "Abraham Silberschatz",
-      category: "Operating Systems",
-    },
-    {
-      title: "Database System Concepts",
-      author: "Abraham Silberschatz",
-      category: "Database",
-    },
-    {
-      title: "Computer Organization and Design",
-      author: "David Patterson",
-      category: "Computer Science",
-    },
-    {
-      title: "Engineering Mathematics",
-      author: "B. S. Grewal",
-      category: "Mathematics",
-    },
-    {
+      id: 15,
       title: "The Power of Now",
       author: "Eckhart Tolle",
       category: "Self Help",
     },
     {
-      title: "Man's Search for Meaning",
-      author: "Viktor Frankl",
-      category: "Psychology",
+      id: 16,
+      title: "Deep Work",
+      author: "Cal Newport",
+      category: "Productivity",
     },
     {
-      title: "The Secret",
-      author: "Rhonda Byrne",
-      category: "Self Help",
+      id: 17,
+      title: "Zero to One",
+      author: "Peter Thiel",
+      category: "Business",
     },
     {
-      title: "The Monk Who Sold His Ferrari",
-      author: "Robin Sharma",
-      category: "Self Help",
+      id: 18,
+      title: "The Lean Startup",
+      author: "Eric Ries",
+      category: "Business",
     },
     {
-      title: "Who Moved My Cheese?",
-      author: "Spencer Johnson",
+      id: 19,
+      title: "Start With Why",
+      author: "Simon Sinek",
+      category: "Business",
+    },
+    {
+      id: 20,
+      title: "Ikigai",
+      author: "Hector Garcia",
       category: "Self Help",
     },
   ];
 
-  // Search books
-  const filteredBooks = books.filter((book) =>
-    book.title.toLowerCase().includes(search.toLowerCase())
-  );
+  const filteredBooks = books.filter((book) => {
+    const search = searchTerm.toLowerCase();
 
-  // Pagination
+    return (
+      book.title.toLowerCase().includes(search) ||
+      book.author.toLowerCase().includes(search) ||
+      book.category.toLowerCase().includes(search)
+    );
+  });
+
   const booksPerPage = 10;
 
-  const totalPages = Math.ceil(filteredBooks.length / booksPerPage);
+  const totalPages = Math.ceil(
+    filteredBooks.length / booksPerPage
+  );
 
   const startIndex = (currentPage - 1) * booksPerPage;
 
@@ -364,13 +153,17 @@ function BrowseBooks() {
     startIndex + booksPerPage
   );
 
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+    setCurrentPage(1);
+  };
+
   return (
     <div className="browse-container">
 
-      {/* Dashboard Button */}
       <button
         className="back-button"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/user")}
       >
         ← Dashboard
       </button>
@@ -381,24 +174,20 @@ function BrowseBooks() {
         Search and explore books available in the library.
       </p>
 
-      {/* Search Box */}
-      <input
-        type="text"
-        placeholder="🔍 Search books..."
-        value={search}
-        onChange={(e) => {
-          setSearch(e.target.value);
-          setCurrentPage(1);
-        }}
-        className="search-box"
-      />
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="Search by title, author or category..."
+          value={searchTerm}
+          onChange={handleSearch}
+        />
+      </div>
 
-      {/* Books Table */}
       <div className="table-container">
         <table className="books-table">
+
           <thead>
             <tr>
-              <th>S.No</th>
               <th>Book Title</th>
               <th>Author</th>
               <th>Category</th>
@@ -407,77 +196,89 @@ function BrowseBooks() {
           </thead>
 
           <tbody>
-            {currentBooks.map((book, index) => (
-              <tr key={index}>
-                <td>{startIndex + index + 1}</td>
+            {currentBooks.length > 0 ? (
+              currentBooks.map((book) => (
+                <tr key={book.id}>
 
-                <td className="book-title">
-                  {book.title}
-                </td>
+                  <td className="book-title">
+                    {book.title}
+                  </td>
 
-                <td>{book.author}</td>
+                  <td>
+                    {book.author}
+                  </td>
 
-                <td>
-                  <span className="category">
+                  <td className="category">
                     {book.category}
-                  </span>
-                </td>
+                  </td>
 
-                <td>
-                  <button
-                    className="details-button"
-                    onClick={() =>
-                      navigate("/book-details", {
-                        state: { book },
-                      })
-                    }
-                  >
-                    View Details
-                  </button>
+                  <td>
+                    <button
+                      className="details-button"
+                      onClick={() =>
+                        navigate("/book-details", {
+                          state: { book },
+                        })
+                      }
+                    >
+                      View Details
+                    </button>
+                  </td>
+
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="4">
+                  No books found.
                 </td>
               </tr>
-            ))}
+            )}
           </tbody>
+
         </table>
       </div>
 
-      {/* Pagination */}
-      <div className="pagination">
+      {totalPages > 0 && (
+        <div className="pagination">
 
-        <button
-          onClick={() => setCurrentPage(currentPage - 1)}
-          disabled={currentPage === 1}
-          className="page-button"
-        >
-          Previous
-        </button>
+          <button
+            className="page-button"
+            disabled={currentPage === 1}
+            onClick={() =>
+              setCurrentPage(currentPage - 1)
+            }
+          >
+            Previous
+          </button>
 
-        {Array.from(
-          { length: totalPages },
-          (_, index) => (
+          {Array.from(
+            { length: totalPages },
+            (_, index) => index + 1
+          ).map((page) => (
             <button
-              key={index}
-              onClick={() => setCurrentPage(index + 1)}
-              className={
-                currentPage === index + 1
-                  ? "page-button active"
-                  : "page-button"
-              }
+              key={page}
+              className={`page-button ${
+                currentPage === page ? "active" : ""
+              }`}
+              onClick={() => setCurrentPage(page)}
             >
-              {index + 1}
+              {page}
             </button>
-          )
-        )}
+          ))}
 
-        <button
-          onClick={() => setCurrentPage(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          className="page-button"
-        >
-          Next
-        </button>
+          <button
+            className="page-button"
+            disabled={currentPage === totalPages}
+            onClick={() =>
+              setCurrentPage(currentPage + 1)
+            }
+          >
+            Next
+          </button>
 
-      </div>
+        </div>
+      )}
 
     </div>
   );

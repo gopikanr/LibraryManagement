@@ -9,22 +9,27 @@ function BookDetails() {
   if (!book) {
     return (
       <div className="book-details-container">
+
         <div className="details-card">
+
           <h2>Book not found</h2>
 
           <button
             className="back-button"
             onClick={() => navigate("/browse-books")}
           >
-            Back to Books
+            ← Back to Books
           </button>
+
         </div>
+
       </div>
     );
   }
 
   return (
     <div className="book-details-container">
+
       <div className="details-card">
 
         <h1>Book Details</h1>
@@ -46,7 +51,9 @@ function BookDetails() {
 
         <div className="detail-row">
           <span>Availability</span>
-          <strong className="available">Available</strong>
+          <strong className="available">
+            Available
+          </strong>
         </div>
 
         <div className="details-buttons">
@@ -60,7 +67,7 @@ function BookDetails() {
 
           <button
             className="back-button"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/user")}
           >
             ← Dashboard
           </button>
@@ -68,6 +75,7 @@ function BookDetails() {
         </div>
 
       </div>
+
     </div>
   );
 }

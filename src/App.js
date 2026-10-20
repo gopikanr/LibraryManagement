@@ -1,17 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// Gopi pages
 import FirstLoginPage from "./frontendpages/FirstLoginPage";
 import AdminDashboard from "./frontendpages/AdminDashboard";
 
-function UserDashboard() {
-  return (
-    <div>
-      <h1>User Dashboard</h1>
-      <p>Welcome to the User Dashboard</p>
-    </div>
-  );
-}
+// Lisha user pages
+import UserDashboard from "./pages/UserDashboard";
+import BrowseBooks from "./pages/BrowseBooks";
+import BookDetails from "./pages/BookDetails";
+import MyBooks from "./pages/MyBooks";
+import IssuedBooks from "./pages/IssuedBooks";
+import ReturnedBooks from "./pages/ReturnedBooks";
 
+// Temporary Admin pages
 function BooksPage() {
   return (
     <div>
@@ -44,22 +45,69 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        {/* Login */}
-        <Route path="/" element={<FirstLoginPage />} />
+        {/* ================= LOGIN ================= */}
 
-        {/* Admin Dashboard */}
-        <Route path="/admin" element={<AdminDashboard />} />
+        <Route
+          path="/"
+          element={<FirstLoginPage />}
+        />
 
-        {/* Admin Pages */}
-        <Route path="/admin/books" element={<BooksPage />} />
-        <Route path="/admin/users" element={<UsersPage />} />
+
+        {/* ================= ADMIN ================= */}
+
+        <Route
+          path="/admin"
+          element={<AdminDashboard />}
+        />
+
+        <Route
+          path="/admin/books"
+          element={<BooksPage />}
+        />
+
+        <Route
+          path="/admin/users"
+          element={<UsersPage />}
+        />
+
         <Route
           path="/admin/issue-return"
           element={<IssueReturnPage />}
         />
 
-        {/* User Dashboard */}
-        <Route path="/user" element={<UserDashboard />} />
+
+        {/* ================= USER ================= */}
+
+        <Route
+          path="/user"
+          element={<UserDashboard />}
+        />
+
+        <Route
+          path="/browse-books"
+          element={<BrowseBooks />}
+        />
+
+        {/* Book Details */}
+        <Route
+          path="/book-details"
+          element={<BookDetails />}
+        />
+
+        <Route
+          path="/my-books"
+          element={<MyBooks />}
+        />
+
+        <Route
+          path="/issued-books"
+          element={<IssuedBooks />}
+        />
+
+        <Route
+          path="/returned-books"
+          element={<ReturnedBooks />}
+        />
 
       </Routes>
     </BrowserRouter>
