@@ -74,6 +74,106 @@ function BrowseBooks() {
     { title: "The Secret", author: "Rhonda Byrne", category: "Self Help" },
     { title: "The Monk Who Sold His Ferrari", author: "Robin Sharma", category: "Self Help" },
     { title: "Who Moved My Cheese?", author: "Spencer Johnson", category: "Self Help" },
+
+    // Business, productivity and psychology
+    { title: "The Lean Startup", author: "Eric Ries", category: "Business" },
+    { title: "Start with Why", author: "Simon Sinek", category: "Business" },
+    { title: "Good to Great", author: "Jim Collins", category: "Business" },
+    { title: "The 4-Hour Workweek", author: "Timothy Ferriss", category: "Productivity" },
+    { title: "The E-Myth Revisited", author: "Michael E. Gerber", category: "Business" },
+    { title: "Zero to One", author: "Peter Thiel", category: "Business" },
+    { title: "The Hard Thing About Hard Things", author: "Ben Horowitz", category: "Business" },
+    { title: "Thinking, Fast and Slow", author: "Daniel Kahneman", category: "Psychology" },
+    { title: "Mindset", author: "Carol S. Dweck", category: "Psychology" },
+    { title: "Grit", author: "Angela Duckworth", category: "Psychology" },
+    { title: "Emotional Intelligence", author: "Daniel Goleman", category: "Psychology" },
+    { title: "Quiet", author: "Susan Cain", category: "Psychology" },
+    { title: "The Happiness Project", author: "Gretchen Rubin", category: "Self Help" },
+    { title: "Essentialism", author: "Greg McKeown", category: "Productivity" },
+    { title: "Make Time", author: "Jake Knapp", category: "Productivity" },
+    { title: "Getting Things Done", author: "David Allen", category: "Productivity" },
+    { title: "The One Thing", author: "Gary Keller", category: "Productivity" },
+
+    // Biography and nonfiction
+    { title: "Can't Hurt Me", author: "David Goggins", category: "Biography" },
+    { title: "Educated", author: "Tara Westover", category: "Memoir" },
+    { title: "Becoming", author: "Michelle Obama", category: "Memoir" },
+    { title: "Long Walk to Freedom", author: "Nelson Mandela", category: "Biography" },
+    { title: "Steve Jobs", author: "Walter Isaacson", category: "Biography" },
+    { title: "Einstein: His Life and Universe", author: "Walter Isaacson", category: "Biography" },
+    { title: "The Diary of a Young Girl", author: "Anne Frank", category: "Memoir" },
+    { title: "The Immortal Life of Henrietta Lacks", author: "Rebecca Skloot", category: "Science" },
+    { title: "Bad Blood", author: "John Carreyrou", category: "Nonfiction" },
+    { title: "Into the Wild", author: "Jon Krakauer", category: "Adventure" },
+
+    // Classic books
+    { title: "The Old Man and the Sea", author: "Ernest Hemingway", category: "Classic" },
+    { title: "Wuthering Heights", author: "Emily Bronte", category: "Classic" },
+    { title: "Frankenstein", author: "Mary Shelley", category: "Classic" },
+    { title: "Dracula", author: "Bram Stoker", category: "Classic" },
+    { title: "The Picture of Dorian Gray", author: "Oscar Wilde", category: "Classic" },
+    { title: "The Catcher in the Rye", author: "J. D. Salinger", category: "Classic" },
+    { title: "Of Mice and Men", author: "John Steinbeck", category: "Classic" },
+    { title: "Fahrenheit 451", author: "Ray Bradbury", category: "Dystopian" },
+    { title: "Brave New World", author: "Aldous Huxley", category: "Dystopian" },
+    { title: "The Handmaid's Tale", author: "Margaret Atwood", category: "Dystopian" },
+
+    // Fantasy and young adult
+    { title: "The Maze Runner", author: "James Dashner", category: "Young Adult" },
+    { title: "Divergent", author: "Veronica Roth", category: "Young Adult" },
+    { title: "Percy Jackson and the Lightning Thief", author: "Rick Riordan", category: "Fantasy" },
+    { title: "The Chronicles of Narnia", author: "C. S. Lewis", category: "Fantasy" },
+    { title: "A Game of Thrones", author: "George R. R. Martin", category: "Fantasy" },
+    { title: "The Name of the Wind", author: "Patrick Rothfuss", category: "Fantasy" },
+    { title: "The Midnight Library", author: "Matt Haig", category: "Fiction" },
+    { title: "Where the Crawdads Sing", author: "Delia Owens", category: "Mystery" },
+
+    // Mystery, thriller and horror
+    { title: "The Thursday Murder Club", author: "Richard Osman", category: "Mystery" },
+    { title: "Murder on the Orient Express", author: "Agatha Christie", category: "Mystery" },
+    { title: "And Then There Were None", author: "Agatha Christie", category: "Mystery" },
+    { title: "The Hound of the Baskervilles", author: "Arthur Conan Doyle", category: "Mystery" },
+    { title: "Rebecca", author: "Daphne du Maurier", category: "Gothic Fiction" },
+    { title: "The Shining", author: "Stephen King", category: "Horror" },
+    { title: "It", author: "Stephen King", category: "Horror" },
+    { title: "The Ocean at the End of the Lane", author: "Neil Gaiman", category: "Fantasy" },
+    { title: "Neverwhere", author: "Neil Gaiman", category: "Fantasy" },
+    { title: "The Little Prince", author: "Antoine de Saint-Exupery", category: "Classic" },
+    { title: "The Secret Garden", author: "Frances Hodgson Burnett", category: "Classic" },
+    { title: "Anne of Green Gables", author: "L. M. Montgomery", category: "Classic" },
+    { title: "The Adventures of Sherlock Holmes", author: "Arthur Conan Doyle", category: "Mystery" },
+
+    // Science fiction and science
+    { title: "The Three-Body Problem", author: "Liu Cixin", category: "Science Fiction" },
+    { title: "Dune", author: "Frank Herbert", category: "Science Fiction" },
+    { title: "Ender's Game", author: "Orson Scott Card", category: "Science Fiction" },
+    { title: "The Martian", author: "Andy Weir", category: "Science Fiction" },
+    { title: "Project Hail Mary", author: "Andy Weir", category: "Science Fiction" },
+    { title: "The Selfish Gene", author: "Richard Dawkins", category: "Science" },
+    { title: "The Gene", author: "Siddhartha Mukherjee", category: "Science" },
+    { title: "The Body", author: "Bill Bryson", category: "Science" },
+    { title: "The Code Book", author: "Simon Singh", category: "Technology" },
+    { title: "The Information", author: "James Gleick", category: "Technology" },
+
+    // Programming and computer science
+    { title: "Clean Architecture", author: "Robert C. Martin", category: "Programming" },
+    { title: "Refactoring", author: "Martin Fowler", category: "Programming" },
+    { title: "Design Patterns", author: "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides", category: "Programming" },
+    { title: "Cracking the Coding Interview", author: "Gayle Laakmann McDowell", category: "Computer Science" },
+    { title: "Grokking Algorithms", author: "Aditya Bhargava", category: "Computer Science" },
+    { title: "The C Programming Language", author: "Brian W. Kernighan and Dennis M. Ritchie", category: "Programming" },
+    { title: "Effective Java", author: "Joshua Bloch", category: "Programming" },
+    { title: "Head First Java", author: "Kathy Sierra and Bert Bates", category: "Programming" },
+    { title: "Learning Python", author: "Mark Lutz", category: "Programming" },
+    { title: "Fluent Python", author: "Luciano Ramalho", category: "Programming" },
+    { title: "Practical Statistics for Data Scientists", author: "Peter Bruce, Andrew Bruce, and Peter Gedeck", category: "Data Science" },
+    { title: "Python for Data Analysis", author: "Wes McKinney", category: "Data Science" },
+    { title: "The Hundred-Page Machine Learning Book", author: "Andriy Burkov", category: "Machine Learning" },
+    { title: "Pattern Recognition and Machine Learning", author: "Christopher M. Bishop", category: "Machine Learning" },
+    { title: "Deep Learning with Python", author: "Francois Chollet", category: "Machine Learning" },
+    { title: "The Art of Statistics", author: "David Spiegelhalter", category: "Statistics" },
+    { title: "Naked Statistics", author: "Charles Wheelan", category: "Statistics" },
+    { title: "The Intelligent Investor", author: "Benjamin Graham", category: "Finance" },
   ];
 
   const filteredBooks = books.filter((book) =>
@@ -86,6 +186,7 @@ function BrowseBooks() {
   const totalBooks = books.length;
   const totalPages = Math.ceil(filteredBooks.length / booksPerPage);
   const startIndex = (currentPage - 1) * booksPerPage;
+
   const currentBooks = filteredBooks.slice(
     startIndex,
     startIndex + booksPerPage
@@ -128,6 +229,7 @@ function BrowseBooks() {
             }}
             className="search-box"
           />
+
           {search && (
             <button
               className="clear-search"
@@ -141,6 +243,7 @@ function BrowseBooks() {
             </button>
           )}
         </div>
+
         <span className="results-count">
           {filteredBooks.length} books found
         </span>
@@ -216,7 +319,9 @@ function BrowseBooks() {
 
           <div className="pagination-controls">
             <button
-              onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+              onClick={() =>
+                setCurrentPage((page) => Math.max(1, page - 1))
+              }
               disabled={currentPage === 1}
               className="page-button"
             >
